@@ -97,12 +97,17 @@ window.onload = () =>{
                 method: 'POST',
                 body: form_data
             })
-                .then(response => alert( "Регистрация прошла успешно"))
+                .then(response => {
+                    document.forms['form'].reset();  //clear form
+                    document.location.href = 'success.html'; //go to success page
+                    alert( "Регистрация прошла успешно");
+                })
                 .catch(error => console.error(error));
-
-            document.forms['form'].reset();  //clear form
         }
         return false;
     });
+
+
+
 };
 

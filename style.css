@@ -21,37 +21,42 @@
     padding: 0;
     margin: 0;
 }
-
+html{
+    height: 100%;
+}
 body{
     display: block;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #F4F5FC;
-    overflow: hidden;
 }
 #wrap {
-    position: relative;
-    left: 8.5%;
-    top: 10.0%;
+    font-size: 0;
+    margin: 0 15%;
+    min-height: 80vh;
+    height: auto;
+    background-color: #5A61ED;
 }
+
 
 .header{
     position: relative;
-    width: 17.25%;
-    height: 80vh;
-    background: #5A61ED;
+    width: 20%;
+    min-height: 80vh;
+    display: inline-block;
+
 }
 
 .header p{
     position: absolute;
-    right: -43px;
+    right: -38px;
     bottom: 71px;
     display: inline-block;
     color: #FFFFFF;
     font-family: "PT Sans", sans-serif;
     transform: rotate(-90deg);
-    font-size: 49px;
+    font-size: calc(40px + 6*(100vw / 1280));
     line-height: 63px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -59,32 +64,29 @@ body{
 
 h2{
     text-overflow: ellipsis;
+    z-index: 5 !important;
+    position: relative;
 }
 
 .form{
     position: relative;
-    padding-right: 5px;
-    top: -80vh;
-    left: 17.25%;
-    width: 66%;
-    height: 80vh;
+    display: inline-block;
+    width: 80%;
+    min-height: 80vh;
     background: #FFFFFF;
     font-family: "Work Sans", sans-serif;
     color: #111111;
-    padding-top: 39px;
-    padding-left: 20px;
-    font-size: 0.9em;
+    font-size: calc(12px + 6*(100vw / 1280));
     letter-spacing: -.5px;
     box-sizing: border-box;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 39px 5px 10px 20px;
 }
 
-.form{
-    z-index: 100;
-}
 
 .form p{
+    position: relative;
     text-overflow: ellipsis;
     width: 100%;
     z-index: 5;
@@ -104,6 +106,7 @@ h2{
     bottom: -59px;
     right: -106px;
     border-radius: 250px;
+    z-index: 0 !important;
 }
 
 .circle:after{
@@ -117,6 +120,7 @@ h2{
     height: 58px;
     border: 29px solid #F9FAFF;
     border-radius: 250px;
+    z-index: 0 !important;
 }
 
 .circle:before{
@@ -159,7 +163,6 @@ h2{
 
 .form form{
     margin-top: 22px;
-    height: 39vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -358,18 +361,68 @@ div.gender{
     margin-left: 22px;
 }
 
+#success-header{
+    margin: 30vh 0 10px 45px;
+}
 
+#success-paragraph{
+    margin-left: 42px;
+}
 
+.log-in{
+    position: absolute;
+    bottom: 24px;
+    left: 31px;
+    letter-spacing: -1.1px;
+    width: 300px;
+}
 
+.log-in a{
+    position: relative;
+    margin-left: 1%;
+    display: inline-block;
+    z-index: 2;
+}
 
+.log-in p{
+    width: 125px;
+    display: inline-block;
+}
 
+label, .label p, .label label{
+    display: inline-block;
+    margin-top: 3px;
+}
 
-
-
-
-
-@media(min-width: 980px){
-    #wrap{
-
+@media screen and (max-width:768px){
+    #wrap {
+        margin: 0;
     }
 }
+
+@media screen and (max-width:570px){
+    .log-in a{
+        margin-left: 10px;
+    }
+    .form form{
+        grid-template-columns: 1fr;
+    }
+    .button{
+        position: relative;
+        margin-top: 50px;
+        left: 10px;
+    }
+    .header{
+        min-height: 100vh;
+        background: #5A61ED;
+    }
+    .form{
+        min-height: 100vh;
+    }
+
+}
+
+
+
+
+
