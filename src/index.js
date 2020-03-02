@@ -97,7 +97,7 @@ window.onload = () =>{
                 method: 'POST',
                 body: form_data
             })
-                .then(response => alert( "Data Saved"))
+                .then(response => alert( "Регистрация прошла успешно"))
                 .catch(error => console.error(error));
 
             document.forms['form'].reset();  //clear form
