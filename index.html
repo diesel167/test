@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/jquery-3.4.1.min.js"></script>
+    <script src="src/index.js"></script>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <p>Sign up</p>
+        </div>
+        <div class="form">
+            <h2>New user?</h2>
+            <p>Use the form below to create your account.</p>
+            <form id="form">
+                <label>
+                    First Name
+                    <br>
+                    <input class="input-text" type="text" id="first-name" required>
+                </label>
+                <label>
+                    Last Name
+                    <br>
+                    <input class="input-text" type="text" id="last-name" required>
+                </label>
+                <div class="label">
+                    <label for="nationality">Nationality
+
+                    </label>
+                    <div class="select">
+                        <select name="nationality" id="nationality">
+                            <option value="American">American</option>
+                            <option value="European">European</option>
+                            <option value="Asian">Asian</option>
+                        </select>
+                    </div>
+                </div>
+                <label>
+                    E-mail
+                    <br>
+                    <input type="email" id="e-mail" required>
+                </label>
+                <div class="label">
+                    <p>Date of Birth</p>
+                    <br>
+                    <div class="birthday day">
+                        <label>
+                            <select id="day" name="day"></select>
+                        </label>
+                    </div>
+                    <div class="birthday month">
+                        <label>
+                            <select id="month" name="month"></select>
+                        </label>
+                    </div>
+                    <div class="birthday year">
+                        <label>
+                            <select id="year" name="year"></select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="label gender">
+                    <p class="gender">Gender</p>
+                    <br>
+
+                    <label for="male" class="radio">Male
+                        <input type="radio" id="male"
+                               name="gender" value="male" checked>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label for="female" class="radio">Female
+                        <input type="radio" id="female"
+                               name="gender" value="female">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <label>
+                    Password
+                    <br>
+                    <input type="password" id="password"  required>
+                </label>
+                <label>
+                    Confirm Password
+                    <br>
+                    <input type="password" id="password-repeat"  required>
+                </label>
+
+                <button class="button" type="submit" >Complete Signup</button>
+            </form>
+
+            <div class="user-icon">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

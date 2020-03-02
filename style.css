@@ -1,0 +1,375 @@
+@font-face {
+    font-family: 'PT Sans';
+    src:
+            url('src/fonts/PT Sans/ptsans.woff2') format('woff2'),
+            url('src/fonts/PT Sans/ptsans.woff') format('woff'),
+            url('src/fonts/PT Sans/ptsans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src:
+            url('src/fonts/Work Sans/Worksans.woff2') format('woff2'),
+            url('src/fonts/Work Sans/Worksans.woff') format('woff'),
+            url('src/fonts/Work Sans/Worksans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #F4F5FC;
+    overflow: hidden;
+}
+#wrap {
+    position: relative;
+    left: 8.5%;
+    top: 10.0%;
+}
+
+.header{
+    position: relative;
+    width: 17.25%;
+    height: 80vh;
+    background: #5A61ED;
+}
+
+.header p{
+    position: absolute;
+    right: -43px;
+    bottom: 71px;
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: "PT Sans", sans-serif;
+    transform: rotate(-90deg);
+    font-size: 49px;
+    line-height: 63px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+h2{
+    text-overflow: ellipsis;
+}
+
+.form{
+    position: relative;
+    padding-right: 5px;
+    top: -80vh;
+    left: 17.25%;
+    width: 66%;
+    height: 80vh;
+    background: #FFFFFF;
+    font-family: "Work Sans", sans-serif;
+    color: #111111;
+    padding-top: 39px;
+    padding-left: 20px;
+    font-size: 0.9em;
+    letter-spacing: -.5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form{
+    z-index: 100;
+}
+
+.form p{
+    text-overflow: ellipsis;
+    width: 100%;
+    z-index: 5;
+}
+
+.user-icon{
+    z-index: 1 !important;
+}
+
+.circle{
+    display: inline-block;
+    width: 355px;
+    box-sizing: content-box;
+    height: 355px;
+    border: 29px solid #F9FAFF;
+    position: absolute;
+    bottom: -59px;
+    right: -106px;
+    border-radius: 250px;
+}
+
+.circle:after{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 56px;
+    left: 118px;
+    width: 58px;
+    box-sizing: content-box;
+    height: 58px;
+    border: 29px solid #F9FAFF;
+    border-radius: 250px;
+}
+
+.circle:before{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 186px;
+    left: 48px;
+    width: 200px;
+    box-sizing: content-box;
+    height: 200px;
+    border: 29px solid #F9FAFF;
+    border-radius: 250px;
+}
+
+.button{
+    position: absolute;
+    bottom: 32px;
+    right: 23px;
+    display: block;
+    width: 154px;
+    height: 32px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+    font: bold 18px arial;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #5A61ED;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 2;
+    font-family: PT Sans, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .5px;
+}
+
+.form form{
+    margin-top: 22px;
+    height: 39vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+input{
+    line-height: 25px;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    font-family: Work Sans, sans-serif;
+    font-size: 14px;
+}
+
+.select {
+    width: 90%;
+    position: relative;
+    display: inline-block;
+}
+
+.select:after {
+    content: '';
+    padding: 0 8px;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    z-index: 1;
+    text-align: center;
+    pointer-events: none;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    background: url('src/img/exp.svg') no-repeat;
+}
+
+select {
+    line-height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #F2F2F2;
+    width: 100%;
+    padding-right: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label, div.label {
+    font-family: Work Sans, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+    position: relative;
+    z-index: 2;
+}
+
+div.label input{
+    width: 15%;
+}
+
+.label p{
+    margin-bottom: -15px;
+}
+
+.birthday{
+    box-sizing: border-box;
+    position: relative;
+    outline: none;
+    display: inline-block;
+    padding-right: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.day{
+    width: 28%;
+    min-width: 45px;
+
+}
+p.gender{
+    margin-bottom: -9px !important;
+}
+
+.month{
+    width: 39%;
+    min-width: 80px;
+}
+.year{
+    width: 30%;
+    min-width: 60px;
+}
+div.birthday:after{
+    content: '';
+    padding: 0 8px;
+    font-size: 12px;
+    position: absolute;
+    right: 7px;
+    top: 9px;
+    z-index: 1;
+    text-align: center;
+    pointer-events: none;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    background: url('src/img/exp.svg') no-repeat;
+}
+
+
+div.gender{
+    margin-left: -2px;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Work Sans, sans-serif;
+    font-size: 14px;
+    color: #111111;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #5A61ED;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .checkmark {
+    background-color: transparent;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkmark {
+    background-color: transparent;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5A61ED;
+}
+
+.radio:last-child{
+    margin-left: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 980px){
+    #wrap{
+
+    }
+}
